@@ -1,0 +1,30 @@
+---
+# tasks file for Alta_Usuarios_LosCracks
+ 
+ - name: "Rol: Alta_Usuarios - Grupo: Los-Cracks"
+   debug:
+     msg: "inicio de tareas"
+
+ - name: "Creo grupos"
+   become: yes
+   ansible.builtin.group:
+     name: G_R1
+     name: G_R2
+     name: G_R3
+     name: G_R4
+     name: G_R5
+     name: G_R6
+     name: loscracks
+     state: present
+     
+ - name: "Creo usuario R1"
+   ansible.builtin.user:
+     name: R1_sebasartorato
+     comment: Sebastian Sartorato
+     group: G_R1
+     groups: loscracks
+     password: "123456789"
+
+#Usuarios
+
+

@@ -1,0 +1,18 @@
+---
+# tasks file for Instala-tools_LosCracks
+
+
+ - name: "Rol: Instala-tools_LosCracks - Grupo: Los-Cracks"
+   debug: 
+      msg: "Inicio de tareas"
+
+
+ - name: "Instalar tools"
+   become: yes
+   dnf: 
+      state: present
+      update_cache: yes
+      name:
+          - htop
+          - tmux
+          - speedtest-cli

@@ -1,8 +1,35 @@
 ---
 # tasks file for TP_INI
 
- - name: "Rol: TP_INI - Grupo: {{ Nombre_Grupo }}"
+ - name: "Rol: TP_INI - Grupo: {{ LosCracks }}"
    debug:
-     msg: "Inicio de tareas dentro del Rol: TP_INI"
+      msg: "Inicio de tareas dentro del Rol: TP_INI"
+
+ - name: "Crear directorio para el archivo"
+   file: 
+      path: /tmpt/Grupo
+      state: directory
+ 
+ - name: "Crear datos.txt"
+   copy: 
+      dest: /tmpt/Grupo/datos.txt
+      owner: vagrant
+      content: |  
+        Owner: vagrant
+        Con el siguiente contenido:
+        Nombre Grupo: Los-Cracks
+        División: 314
+        Fecha: 14-11-24
+        —-------------------------
+        Distribución: Ubuntu
+        Cantidad de Cores: 1
+        —-------------------------
+        R1: Nombre: Sebastian Apellido: Sartorato
+        R2: Nombre: Sebastian Apellido: Sartorato
+        R3: Nombre: Sebastian Apellido: Sartorato
+        R4: Nombre: Sebastian Apellido: Sartorato
+        R5: Nombre: Sebastian Apellido: Sartorato
+        R6: Nombre: Sebastian Apellido: Sartorato
 
 
+      

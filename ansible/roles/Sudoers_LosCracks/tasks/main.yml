@@ -1,0 +1,15 @@
+---
+# tasks file for Sudoers_LosCracks
+
+ - name: "Rol: Sudoers_LosCracks - Grupo: Los-Cracks"
+   debug:
+     msg: "Inicio de tareas"
+
+ - name: "Agrego a sudoers el grupo"
+   become: yes
+   lineinfile:
+      dest: /etc/sudoers
+      state: present
+      regexp: '^%loscracks'
+      line: '%loscracks ALL=(ALL) NOPASSWD: ALL' 
+      validate: '/usr/sbin/visudo -cf %s'
