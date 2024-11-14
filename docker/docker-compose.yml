@@ -2,8 +2,8 @@ version: '3'
 
 services:
     web:
-        image: 
+        image: sebasartorato/los_cracks
         ports:
-            - 
+          - "8081:80" 
         volumes:
-            - 
+          - ./web:/usr/share/nginx/html
