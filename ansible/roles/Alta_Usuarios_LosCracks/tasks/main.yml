@@ -8,54 +8,54 @@
  - name: "Creo grupos"
    become: yes
    ansible.builtin.group:
-     name: G_R1
-     name: G_R2
-     name: G_R3
-     name: G_R4
-     name: G_R5
+     #name: G_R1
+     #name: G_R2
+     #name: G_R3
+     #name: G_R4
+     #name: G_R5
      name: loscracks
      state: present
      
- - name: "Creo usuario R1"
-   ansible.builtin.user:
-     name: R1_sebasartorato
-     comment: Sebastian_Sartorato
-     group: G_R1
-     groups: loscracks
-     password: "123456789"
+ #- name: "Creo usuario R1"
+ #  ansible.builtin.user:
+ #    name: R1_sebasartorato
+ #    comment: Sebastian_Sartorato
+ #    group: G_R1
+ #    groups: loscracks
+ #    password: "123456789"
 
- - name: "Creo usuario R2"
-   ansible.builtin.user:
-    name: R2_sebasartorato
-    comment: Sebastian_Sartorato_2
-    group: G_R2
-    groups: loscracks
-    password: "123456789"
+ #- name: "Creo usuario R2"
+ #  ansible.builtin.user:
+ #   name: R2_sebasartorato
+ #   comment: Sebastian_Sartorato_2
+ #   group: G_R2
+ #   groups: loscracks
+ #   password: "123456789"
 
- - name: "Creo usuario R3"
-   ansible.builtin.user:
-    name: R3_sebasartorato
-    comment: Sebastian_Sartorato_3
-    group: G_R3
-    groups: loscracks
-    password: "123456789"
+ #- name: "Creo usuario R3"
+ #  ansible.builtin.user:
+ #   name: R3_sebasartorato
+ #   comment: Sebastian_Sartorato_3
+ #   group: G_R3
+ #   groups: loscracks
+ #   password: "123456789"
 
- - name: "Creo usuario R4"
-   ansible.builtin.user:
-    name: R4_sebasartorato
-    comment: Sebastian_Sartorato_4
-    group: G_R4
-    groups: loscracks
-    password: "123456789"
+ #- name: "Creo usuario R4"
+ #  ansible.builtin.user:
+ #   name: R4_sebasartorato
+ #   comment: Sebastian_Sartorato_4
+ #   group: G_R4
+ #   groups: loscracks
+ #   password: "123456789"
 
 
- - name: "Creo usuario R5"
-   ansible.builtin.user:
-    name: R5_sebasartorato
-    comment: Sebastian_Sartorato_5
-    group: G_R5
-    groups: loscracks
-    password: "123456789"
+ #- name: "Creo usuario R5"
+ #  ansible.builtin.user:
+ #   name: R5_sebasartorato
+ #   comment: Sebastian_Sartorato_5
+ #   group: G_R5
+ #   groups: loscracks
+ #   password: "123456789"
 
 
 

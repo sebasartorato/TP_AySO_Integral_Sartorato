@@ -16,12 +16,12 @@
       debug:
         msg: "Despues de la ejecucion del rol"
     
-    #- include_role:
-    #    name: Alta_Usuarios_LosCracks
+    - include_role:
+        name: Alta_Usuarios_LosCracks
 
-    #- include_role:
-    #    name: Instala-tools_LosCracks
+    - include_role:
+        name: Instala-tools_LosCracks
     
-    #- include_role:
-    #    name: Sudoers_LosCracks
+    - include_role:
+        name: Sudoers_LosCracks
 
