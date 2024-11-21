@@ -9,10 +9,10 @@
 
  - name: "Instalar tools"
    become: yes
-   dnf: 
-      state: present
-      update_cache: yes
+   package: 
       name:
           - htop
           - tmux
           - speedtest-cli
+      state: present
+      update_cache: yes

@@ -9,19 +9,19 @@
     - vars/main.yml
 
   tasks:
-    - include_role:
-        name: TP_INI
+    #- include_role:
+    #    name: TP_INI
     
     - name: "Otra tarea"
       debug:
         msg: "Despues de la ejecucion del rol"
     
-    - include_role:
-        name: Alta_Usuarios_LosCracks
+    #- include_role:
+    #    name: Alta_Usuarios_LosCracks
 
     - include_role:
         name: Instala-tools_LosCracks
     
-    - include_role:
-        name: Sudoers_LosCracks
+    #- include_role:
+    #    name: Sudoers_LosCracks
 

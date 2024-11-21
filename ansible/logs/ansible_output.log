@@ -1,0 +1,65 @@
+2024-11-21 17:00:02,996 p=3916 u=vagrant n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-21 17:00:03,382 p=3916 u=vagrant n=ansible | PLAY [testing,produccion] ********************************************************************************************************************************************************************
+2024-11-21 17:00:03,406 p=3916 u=vagrant n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************************************************************
+2024-11-21 17:00:03,538 p=3916 u=vagrant n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nvagrant@127.0.0.1: Permission denied (publickey).", "unreachable": true}
+2024-11-21 17:00:03,540 p=3916 u=vagrant n=ansible | PLAY RECAP ***********************************************************************************************************************************************************************************
+2024-11-21 17:00:03,541 p=3916 u=vagrant n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-21 17:17:35,496 p=4079 u=vagrant n=ansible | 192.168.56.4 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: Warning: Permanently added '192.168.56.4' (ED25519) to the list of known hosts.\r\nvagrant@192.168.56.4: Permission denied (publickey).",
+    "unreachable": true
+}
+2024-11-21 17:17:36,511 p=4079 u=vagrant n=ansible | 192.168.56.5 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-11-21 17:22:06,809 p=4284 u=vagrant n=ansible | 192.168.56.5 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-11-21 17:22:06,815 p=4284 u=vagrant n=ansible | 192.168.56.4 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-11-21 17:23:20,193 p=4392 u=vagrant n=ansible | PLAY [testing,produccion] ********************************************************************************************************************************************************************
+2024-11-21 17:23:20,207 p=4392 u=vagrant n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************************************************************
+2024-11-21 17:23:22,417 p=4392 u=vagrant n=ansible | ok: [192.168.56.4]
+2024-11-21 17:23:22,436 p=4392 u=vagrant n=ansible | TASK [Otra tarea] ****************************************************************************************************************************************************************************
+2024-11-21 17:23:22,454 p=4392 u=vagrant n=ansible | ok: [192.168.56.4] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-11-21 17:23:22,465 p=4392 u=vagrant n=ansible | TASK [include_role : Instala-tools_LosCracks] ************************************************************************************************************************************************
+2024-11-21 17:23:22,509 p=4392 u=vagrant n=ansible | TASK [Instala-tools_LosCracks : Rol: Instala-tools_LosCracks - Grupo: Los-Cracks] ************************************************************************************************************
+2024-11-21 17:23:22,529 p=4392 u=vagrant n=ansible | ok: [192.168.56.4] => {
+    "msg": "Inicio de tareas"
+}
+2024-11-21 17:23:22,539 p=4392 u=vagrant n=ansible | TASK [Instala-tools_LosCracks : Instalar tools] **********************************************************************************************************************************************
+2024-11-21 17:23:23,197 p=4392 u=vagrant n=ansible | fatal: [192.168.56.4]: FAILED! => {"changed": false, "cmd": "dnf install -y python3-dnf", "msg": "[Errno 2] No such file or directory: b'dnf'", "rc": 2}
+2024-11-21 17:23:23,199 p=4392 u=vagrant n=ansible | PLAY RECAP ***********************************************************************************************************************************************************************************
+2024-11-21 17:23:23,199 p=4392 u=vagrant n=ansible | 192.168.56.4               : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-11-21 17:27:46,980 p=4646 u=vagrant n=ansible | PLAY [testing,produccion] ********************************************************************************************************************************************************************
+2024-11-21 17:27:46,996 p=4646 u=vagrant n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************************************************************
+2024-11-21 17:27:49,201 p=4646 u=vagrant n=ansible | ok: [192.168.56.4]
+2024-11-21 17:27:49,218 p=4646 u=vagrant n=ansible | TASK [Otra tarea] ****************************************************************************************************************************************************************************
+2024-11-21 17:27:49,235 p=4646 u=vagrant n=ansible | ok: [192.168.56.4] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-11-21 17:27:49,250 p=4646 u=vagrant n=ansible | TASK [include_role : Instala-tools_LosCracks] ************************************************************************************************************************************************
+2024-11-21 17:27:49,290 p=4646 u=vagrant n=ansible | TASK [Instala-tools_LosCracks : Rol: Instala-tools_LosCracks - Grupo: Los-Cracks] ************************************************************************************************************
+2024-11-21 17:27:49,307 p=4646 u=vagrant n=ansible | ok: [192.168.56.4] => {
+    "msg": "Inicio de tareas"
+}
+2024-11-21 17:27:49,322 p=4646 u=vagrant n=ansible | TASK [Instala-tools_LosCracks : Instalar tools] **********************************************************************************************************************************************
+2024-11-21 17:28:09,317 p=4646 u=vagrant n=ansible | changed: [192.168.56.4]
+2024-11-21 17:28:09,341 p=4646 u=vagrant n=ansible | PLAY RECAP ***********************************************************************************************************************************************************************************
+2024-11-21 17:28:09,341 p=4646 u=vagrant n=ansible | 192.168.56.4               : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
